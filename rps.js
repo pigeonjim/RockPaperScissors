@@ -68,11 +68,43 @@ function winOrLose(result){
     }
 }
 
-const buttons = document.querySelectorAll('.allButtons');
-    buttons.forEach((button) => {
 
-        button.addEventListener('click', () => {
-            playRound(getComputerChoice(), button.textContent.toLowerCase());
-        })
+const mainDiv = document.querySelector('.mainDiv');
+const startDiv = document.querySelector('.startDiv');
+
+const startButton = document.querySelector('.startButton');
+    startButton.addEventListener('click', () => {
+        addButtons();
+
+        mainDiv.removeChild(startDiv);
 })
+
+function addButtons(){
+    const theButtons = document.createElement('div');
+    theButtons.className = "buttonsDiv allButtons";
+        const b1 = document.createElement('button');
+        b1.className = "rockButton allButtons moveButton";
+        b1.textContent = "Rock";
+        const b2 = document.createElement('button');
+        b2.className = "paperButton allButtons moveButton";
+        b2.textContent = "Paper";
+        const b3= document.createElement('button');
+        b3.className = "scissorsButton allButtons moveButton";
+        b3.textContent = "Scissor";
+        theButtons.appendChild(b1);
+        theButtons.appendChild(b2);
+        theButtons.appendChild(b3);
+
+    mainDiv.appendChild(theButtons);
+
+    const buttons = document.querySelectorAll('.moveButton');
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            console.log(button.textContent.toLowerCase());
+           // playRound(getComputerChoice(), button.textContent.toLowerCase());
+        })
+    })
+   
+}
+
 

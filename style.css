@@ -1,5 +1,11 @@
-.mainDiv{
-    padding-top: 100px;
+.startDiv{
+    display: flex;
+    justify-content: center;
+    margin-top: 150pt;
+}
+
+.buttonsDiv{
+    margin-top: 200px;
     display: flex;
     justify-content: space-around;
 }
@@ -11,6 +17,9 @@
   border-radius: 10px;
   border-width: 10px;
 }
+.startButton{
+    border-color: #51B151;
+}
 .rockButton{
     border-color: #41576b91;
 }
@@ -18,9 +27,16 @@
     border-color: #bb11119c;
 }
 .scissorsButton{
-    border-color: #14742bcb;
+    border-color: #172468cb;
 }
 button:hover{
     background-color: #171a176b;
     transition: 1s;
+}
+.results{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+    font-size: 20px;
 }
