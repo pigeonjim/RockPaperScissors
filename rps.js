@@ -15,6 +15,7 @@ function playerSelection(){
 }
 
 function playRound(computerMove, playerMove){
+    console.log(computerMove, playerMove);
     if(computerMove === playerMove){
         return "It's a Draw!";
     }  else if(computerMove === "rock" && playerMove === "paper"){
@@ -33,6 +34,7 @@ function playRound(computerMove, playerMove){
         console.log("logic error here");
         return "you lose";
     }
+
 }
 
 function game(){
@@ -41,8 +43,8 @@ function game(){
 
     for(let i = 0; i < 5; i++){
         let cMove = getComputerChoice();
-        let pMove = playerSelection();
-        let result = playRound(cMove,pMove);
+       // let pMove = playerSelection();
+      //  let result = playRound(cMove,pMove);
         winOrLose(result) === "player" ? pScore++ : cScore++;
     }
 
@@ -65,3 +67,12 @@ function winOrLose(result){
         return "computer";
     }
 }
+
+const buttons = document.querySelectorAll('.allButtons');
+    buttons.forEach((button) => {
+
+        button.addEventListener('click', () => {
+            playRound(getComputerChoice(), button.textContent.toLowerCase());
+        })
+})
+

@@ -1,0 +1,26 @@
+.mainDiv{
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+.allButtons{
+  font-size: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: 5pt 10pt 5pt 10pt;
+  min-width: 100px;
+  border-radius: 10px;
+  border-width: 10px;
+}
+.rockButton{
+    border-color: #41576b91;
+}
+.paperButton{
+    border-color: #bb11119c;
+}
+.scissorsButton{
+    border-color: #14742bcb;
+}
+button:hover{
+    background-color: #171a176b;
+    transition: 1s;
+}
