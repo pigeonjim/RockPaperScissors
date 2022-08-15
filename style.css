@@ -1,3 +1,28 @@
+body{
+    background-color: #FFECC7;
+    margin: 10px;
+}
+.heedDiv, .mainDiv{
+    display: flex;
+    justify-content:center;
+}
+.theHeader{
+    background-color: #8FBBAF;
+    display: flex;
+    justify-content:center;
+    padding: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+    border-radius: 75% 25%;
+    max-width: 250px;
+}
+.headText{
+    font-size: 30px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 700;
+    color: #6B7B8E;
+}
+
 .startDiv{
     display: flex;
     justify-content: center;
@@ -5,9 +30,29 @@
 }
 
 .buttonsDiv{
-    margin-top: 200px;
     display: flex;
     justify-content: space-around;
+    background-color: #F5B971;
+    min-height: 300px;
+    align-items: center;
+    margin: 50px 50px 0px 50px;
+    width: 450px;
+    border-radius: 5%;
+}
+.theResults{
+    display: flex;
+    justify-content: space-around;
+}
+.scoreDiv{
+    display: flex;
+    justify-content: space-around;
+    background-color: #FDD998;
+    min-height: 300px;
+    align-items: center;
+    margin: 25px 50px 0px 50px;
+    width: 450px;
+    border-radius: 5%;
+
 }
 .allButtons{
   font-size: 20px;
@@ -16,9 +61,11 @@
   min-width: 100px;
   border-radius: 10px;
   border-width: 10px;
+  max-height: 100px;
+  border-style:groove;
 }
 .startButton{
-    border-color: #51B151;
+    border-color: #0ee20e8f;
 }
 .rockButton{
     border-color: #41576b91;

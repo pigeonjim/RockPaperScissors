@@ -71,17 +71,18 @@ function winOrLose(result){
 
 const mainDiv = document.querySelector('.mainDiv');
 const startDiv = document.querySelector('.startDiv');
+const resultsDiv = document.querySelector('.theResults')
 
 const startButton = document.querySelector('.startButton');
     startButton.addEventListener('click', () => {
         addButtons();
-
+        addScoreArea()
         mainDiv.removeChild(startDiv);
 })
 
 function addButtons(){
     const theButtons = document.createElement('div');
-    theButtons.className = "buttonsDiv allButtons";
+    theButtons.className = "buttonsDiv";
         const b1 = document.createElement('button');
         b1.className = "rockButton allButtons moveButton";
         b1.textContent = "Rock";
@@ -107,4 +108,10 @@ function addButtons(){
    
 }
 
+function addScoreArea(){
+    const scoreDiv = document.createElement('div');
+    scoreDiv.className = "scoreDiv";
+
+    resultsDiv.appendChild(scoreDiv);
+}
 
